@@ -9,7 +9,7 @@ export function TestimonialsSection() {
         <Reveal>
           <SectionEyebrow>Testimonials</SectionEyebrow>
           <h2 className="mb-14 text-center font-display text-[42px] text-ivory md:text-[56px]">
-            The Voices Of The Syndicate.
+            The Voices Of Balenciao.
           </h2>
         </Reveal>
         <TestimonialCarousel />

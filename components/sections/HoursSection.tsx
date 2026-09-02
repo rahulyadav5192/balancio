@@ -23,7 +23,7 @@ export function HoursSection() {
           <h2 className="max-w-[520px] font-display text-[42px] text-ivory md:text-[58px]">
             Plan Your Escape To
             <br />
-            The Syndicate.
+            The Balenciao.
           </h2>
           <p className="mt-6 max-w-[460px] text-[15px] leading-7 text-ivory-muted">
             Whether it is an intimate mid-week drink or a high-energy weekend

@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Reservation",
   description:
-    "Request a table at Midnight Syndicate. Our concierge team will confirm availability.",
+    "Request a table at Balenciao. Our concierge team will confirm availability.",
 };
 
 export default function ReservationPage() {

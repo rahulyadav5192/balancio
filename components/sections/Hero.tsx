@@ -5,6 +5,11 @@ import Image from "next/image";
 import { ScrollOrnament } from "@/components/ui/ScrollOrnament";
 import { SocialRail } from "@/components/ui/SocialRail";
 import { images } from "@/lib/images";
+import { site } from "@/lib/site";
+
+const [heroLineOne, heroLineTwo] = site.tagline.split(". ").map((line) =>
+  line.endsWith(".") ? line : `${line}.`,
+);
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -50,16 +55,12 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
           >
-            <span className="block max-md:hidden">Curated Luxury</span>
-            <span className="block max-md:hidden">For Modern Tastes.</span>
+            <span className="block max-md:hidden">{heroLineOne}</span>
+            <span className="block max-md:hidden">{heroLineTwo}</span>
             <span className="block md:hidden">
-              Curated
+              {heroLineOne.replace(".", "")}
               <br />
-              Luxury For
-              <br />
-              Modern
-              <br />
-              Tastes.
+              {heroLineTwo.replace(".", "")}
             </span>
           </motion.h1>
           <motion.p
@@ -68,7 +69,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 0.61, 0.36, 1] }}
           >
-            Nightfall
+            {site.heroAccent}
           </motion.p>
         </div>
       </div>

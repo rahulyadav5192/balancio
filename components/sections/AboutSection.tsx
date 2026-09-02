@@ -18,7 +18,7 @@ export function AboutSection() {
           </h2>
           <div className="mt-8 max-w-[520px] space-y-5 text-[15px] leading-7 text-ivory-muted">
             <p>
-              Midnight Syndicate is more than a destination. It is an after-dark
+              Balenciao is more than a destination. It is an after-dark
               sanctuary where refined hospitality, carefully selected spirits,
               and intimate conversation come together.
             </p>

@@ -6,7 +6,7 @@ import { images } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Interiors, bars, and evening rooms of Midnight Syndicate.",
+    "Interiors, bars, and evening rooms of Balenciao.",
 };
 
 export default function GalleryPage() {

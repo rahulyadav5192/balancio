@@ -29,8 +29,8 @@ const script = Allura({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Midnight Syndicate | Premium Cocktail Lounge & Nightlife",
-    template: "%s | Midnight Syndicate",
+    default: "Balenciao | Premium Night Club & Restaurant",
+    template: "%s | Balenciao",
   },
   description: site.description,
   keywords: [
@@ -39,19 +39,20 @@ export const metadata: Metadata = {
     "nightlife",
     "mixology",
     "reservations",
-    "New York",
+    "New Delhi",
+    "Connaught Place",
   ],
   openGraph: {
-    title: "Midnight Syndicate | Premium Cocktail Lounge & Nightlife",
+    title: "Balenciao | Premium Night Club & Restaurant",
     description: site.description,
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     siteName: site.name,
     images: [{ url: "/images/hero-bartender.jpg", width: 1920, height: 1080 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Midnight Syndicate | Premium Cocktail Lounge & Nightlife",
+    title: "Balenciao | Premium Night Club & Restaurant",
     description: site.description,
   },
 };
@@ -79,14 +80,20 @@ const jsonLd = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-      opens: "18:00",
-      closes: "23:00",
+      opens: "19:00",
+      closes: "01:30",
     },
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Friday", "Saturday", "Sunday"],
-      opens: "17:00",
-      closes: "00:00",
+      dayOfWeek: ["Friday", "Saturday"],
+      opens: "19:00",
+      closes: "02:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "19:00",
+      closes: "01:00",
     },
   ],
 };
