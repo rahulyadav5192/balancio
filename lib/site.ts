@@ -84,3 +84,9 @@ export const navigation = [
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },
 ] as const;
+
+export const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms & Conditions", href: "/terms" },
+  { label: "Refund & Cancellation", href: "/refunds" },
+] as const;

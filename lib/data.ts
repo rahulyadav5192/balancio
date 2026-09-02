@@ -64,28 +64,76 @@ export const storyFeatures = [
   },
 ] as const;
 
-export const galleryItems = [
+export type GalleryCategory = "drinks" | "food" | "music";
+
+export type GalleryFilterId = "all" | GalleryCategory;
+
+export const galleryFilters: { id: GalleryFilterId; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "drinks", label: "Cocktails" },
+  { id: "food", label: "Dining" },
+  { id: "music", label: "Live Nights" },
+];
+
+export type GalleryItem = {
+  src: string;
+  alt: string;
+  category: GalleryCategory;
+  title: string;
+  caption: string;
+};
+
+export const galleryItems: GalleryItem[] = [
   {
     src: images.gallery[0],
     alt: "Mahogany bar counter with warm tungsten lighting and brass fixtures",
+    category: "drinks",
+    title: "The Brass Bar",
+    caption: "Mahogany counters and warm tungsten light",
   },
   {
     src: images.gallery[1],
     alt: "Moody private dining room with burgundy seating and candlelight",
+    category: "food",
+    title: "Private Dining",
+    caption: "Burgundy seating and candlelit tables",
   },
   {
     src: images.gallery[2],
     alt: "Cocktail station with glassware, citrus, and dark bottle shelves",
+    category: "drinks",
+    title: "Cocktail Station",
+    caption: "Glassware, citrus, and back-bar shelves",
   },
   {
     src: images.gallery[3],
     alt: "Dim lounge interior with low sofas and amber wall lights",
+    category: "music",
+    title: "Lounge Evenings",
+    caption: "Low sofas and amber wall light",
   },
   {
     src: images.gallery[4],
     alt: "Bartender before a back-bar of rare spirits and crystal glassware",
+    category: "drinks",
+    title: "Spirit Library",
+    caption: "Rare pours and crystal glassware",
   },
-] as const;
+  {
+    src: images.gallery[0],
+    alt: "Live performance area with violet stage lighting",
+    category: "music",
+    title: "Sufi Night",
+    caption: "Live performance under violet wash",
+  },
+  {
+    src: images.gallery[1],
+    alt: "Late-night dining table with curated small plates",
+    category: "food",
+    title: "Late Supper",
+    caption: "Small plates served after dark",
+  },
+];
 
 export type MenuCategory = "starter" | "main" | "desserts" | "drinks";
 
@@ -222,12 +270,20 @@ export const menuItems: Record<MenuCategory, MenuItemData[]> = {
 export const events = [
   {
     slug: "sufi-night",
-    title: "Sufi Night",
+    title: "Sufi Night Under Violet Light",
     category: "Live Performance",
     day: "SAT",
-    date: "24",
+    date: "23",
     month: "MAY",
     time: "9:00 PM Onwards",
+    displayDate: "23 May 2026",
+    startsAt: "2026-05-23T21:00:00+05:30",
+    description: [
+      "An evening of live Sufi vocals, tabla, and harmonium in the main room — intimate, unhurried, and built for long pours.",
+      "Reserve a table early; seating is limited and the room fills quickly once doors open.",
+    ],
+    priceRange: "₹2,500 – ₹6,000",
+    location: "Connaught Place, New Delhi",
     availability: "2 Tables Left",
     soldOut: false,
     image: images.gallery[0],
@@ -235,12 +291,20 @@ export const events = [
   },
   {
     slug: "jazz-evening",
-    title: "Jazz Evening",
+    title: "Jazz Evening At The Brass Bar",
     category: "Live Music",
     day: "FRI",
-    date: "30",
+    date: "29",
     month: "MAY",
     time: "8:30 PM Onwards",
+    displayDate: "29 May 2026",
+    startsAt: "2026-05-29T20:30:00+05:30",
+    description: [
+      "A quartet-led jazz set beside the mahogany bar — standards, improvisation, and a room tuned for conversation.",
+      "Ideal for client dinners, anniversaries, or a mid-week escape that still feels special.",
+    ],
+    priceRange: "₹2,000 – ₹5,500",
+    location: "Connaught Place, New Delhi",
     availability: "5 Tables Left",
     soldOut: false,
     image: images.gallery[1],
@@ -251,15 +315,23 @@ export const events = [
     title: "DJ Rohan Live",
     category: "DJ Night",
     day: "SAT",
-    date: "7",
+    date: "6",
     month: "JUN",
     time: "10:00 PM Onwards",
+    displayDate: "6 June 2026",
+    startsAt: "2026-06-06T22:00:00+05:30",
+    description: [
+      "Peak-hour energy with Rohan on the decks — deep house, disco edits, and a dance floor that stays refined.",
+      "This date is fully held; join the waitlist through our concierge for cancellation releases.",
+    ],
+    priceRange: "₹3,500 – ₹8,000",
+    location: "Connaught Place, New Delhi",
     availability: "Sold Out",
     soldOut: true,
     image: images.gallery[2],
     href: "/reservation",
   },
-] as const;
+];
 
 export const testimonials = [
   {
