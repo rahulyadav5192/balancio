@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -166,6 +167,17 @@ export function ReservationForm() {
           Something went wrong. Please try again or call the concierge desk.
         </p>
       ) : null}
+      <p className="text-xs leading-6 text-muted">
+        By submitting this request, you agree to our{" "}
+        <Link href="/terms" className="text-ivory-muted underline hover:text-gold">
+          Terms &amp; Conditions
+        </Link>{" "}
+        and{" "}
+        <Link href="/privacy" className="text-ivory-muted underline hover:text-gold">
+          Privacy Policy
+        </Link>
+        .
+      </p>
       <Button type="submit" disabled={state === "submitting"} className="w-full md:w-auto">
         {state === "submitting" ? "Sending request…" : "Submit Request"}
       </Button>

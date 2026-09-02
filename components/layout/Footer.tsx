@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { images } from "@/lib/images";
-import { navigation, site } from "@/lib/site";
+import { navigation, legalLinks, site } from "@/lib/site";
 
 function TikTokIcon() {
   return (
@@ -65,9 +65,26 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="mt-16 flex w-full flex-col items-center justify-between gap-3 border-t border-white/10 pt-8 text-[11px] tracking-[0.12em] text-muted uppercase sm:flex-row">
-          <p>© {new Date().getFullYear()} Balenciao. All rights reserved.</p>
-          <p>{site.address.display}</p>
+        <div className="mt-16 flex w-full flex-col items-center gap-6 border-t border-white/10 pt-8">
+          <nav
+            aria-label="Legal"
+            className="flex flex-wrap justify-center gap-x-6 gap-y-2"
+          >
+            {legalLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-[11px] tracking-[0.12em] text-muted uppercase transition-colors hover:text-gold"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex w-full flex-col items-center justify-between gap-3 text-[11px] tracking-[0.12em] text-muted uppercase sm:flex-row">
+            <p>© {new Date().getFullYear()} Balenciao. All rights reserved.</p>
+            <p>{site.address.display}</p>
+          </div>
         </div>
       </div>
     </footer>
