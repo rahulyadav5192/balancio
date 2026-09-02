@@ -47,7 +47,7 @@ export function TestimonialCarousel() {
             className={cn(
               "h-3 w-3 cursor-pointer rounded-full border",
               i === index
-                ? "border-red-soft bg-transparent"
+                ? "border-purple-bright bg-transparent"
                 : "border-white/30 bg-white/20",
             )}
           />

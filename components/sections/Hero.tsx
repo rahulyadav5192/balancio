@@ -28,7 +28,11 @@ export function Hero() {
       </motion.div>
 
       <div
-        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.62)_0%,rgba(0,0,0,.38)_35%,rgba(0,0,0,.52)_74%,rgba(0,0,0,.88)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.58)_0%,rgba(0,0,0,.38)_35%,rgba(0,0,0,.52)_74%,rgba(0,0,0,.86)_100%)]"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.08),transparent_60%)]"
         aria-hidden="true"
       />
       <div

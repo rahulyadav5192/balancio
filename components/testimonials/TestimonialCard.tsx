@@ -13,7 +13,7 @@ export function TestimonialCard({ item, featured = false }: TestimonialCardProps
       className={cn(
         "relative flex h-full flex-col border px-8 py-10",
         featured
-          ? "border-gold bg-[#1b1b1b]"
+          ? "border-gold bg-bg-elevated shadow-[var(--glow-purple)]"
           : "border-border-dark bg-panel",
       )}
     >

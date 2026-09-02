@@ -9,6 +9,14 @@ export function ExperienceSection() {
   return (
     <section className="relative overflow-hidden bg-background py-24 md:py-32">
       <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(124,58,237,0.06),transparent_55%)]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(124,58,237,0.06),transparent_55%)]"
+        aria-hidden="true"
+      />
+      <div
         className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-luminosity"
         aria-hidden="true"
       >

@@ -16,7 +16,7 @@ export function PageHero({ title, eyebrow, image, className }: PageHeroProps) {
       <div className="relative flex min-h-[36vh] items-end px-0 pb-16">
         <div className="container-site">
           {eyebrow ? (
-            <p className="mb-4 text-[11px] font-bold tracking-[0.18em] text-red-soft uppercase">
+            <p className="mb-4 text-[11px] font-bold tracking-[0.18em] text-purple-bright uppercase">
               ✦ {eyebrow} ✦
             </p>
           ) : null}

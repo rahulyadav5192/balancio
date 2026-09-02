@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #030303;
-  --color-bg-secondary: #080808;
-  --color-bg-elevated: #111111;
-  --color-panel: #151515;
-  --color-ivory: #f5f0e8;
-  --color-ivory-muted: #c7c1b8;
-  --color-muted: #8f8a83;
-  --color-gold: #e2ac24;
-  --color-gold-bright: #f6be2c;
-  --color-gold-soft: #b78624;
-  --color-gold-dark: #6f5015;
-  --color-syndicate: #b00008;
-  --color-red-deep: #7f0005;
-  --color-red-soft: #cf1b22;
-  --color-border-dark: #292929;
-  --color-hours: #a70007;
+  --color-background: #000000;
+  --color-bg-secondary: #0a0a0a;
+  --color-bg-elevated: #121212;
+  --color-panel: #1a1a1a;
+  --color-ivory: #ffffff;
+  --color-ivory-muted: #d4d0cc;
+  --color-muted: #8a8680;
+  --color-gold: #d4a84b;
+  --color-gold-bright: #f2d298;
+  --color-gold-soft: #c9a050;
+  --color-gold-dark: #8b6914;
+  --color-purple: #5b2d82;
+  --color-purple-deep: #3d1b5d;
+  --color-purple-bright: #7c3aed;
+  --color-purple-soft: #4a2568;
+  --color-border-dark: #2a2a2a;
 
   --font-display: "Cormorant Garamond", serif;
   --font-sans: "Montserrat", sans-serif;
@@ -27,31 +27,47 @@
 }
 
 :root {
-  --bg-primary: #030303;
-  --bg-secondary: #080808;
-  --bg-elevated: #111111;
-  --bg-card: #151515;
-  --text-primary: #f5f0e8;
-  --text-secondary: #c7c1b8;
-  --text-muted: #8f8a83;
-  --gold: #e2ac24;
-  --gold-bright: #f6be2c;
-  --gold-soft: #b78624;
-  --gold-dark: #6f5015;
-  --red: #b00008;
-  --red-deep: #7f0005;
-  --red-soft: #cf1b22;
-  --border-dark: #292929;
-  --border-gold: rgba(226, 172, 36, 0.65);
-  --overlay-dark: rgba(0, 0, 0, 0.58);
-  --overlay-heavy: rgba(0, 0, 0, 0.78);
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-elevated: #121212;
+  --bg-card: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #d4d0cc;
+  --text-muted: #8a8680;
+  --gold: #d4a84b;
+  --gold-bright: #f2d298;
+  --gold-soft: #c9a050;
+  --gold-dark: #8b6914;
+  --purple: #5b2d82;
+  --purple-deep: #3d1b5d;
+  --purple-bright: #7c3aed;
+  --purple-soft: #4a2568;
+  --border-dark: #2a2a2a;
+  --border-gold: rgba(242, 210, 152, 0.55);
+  --border-purple: rgba(124, 58, 237, 0.45);
+  --overlay-dark: rgba(0, 0, 0, 0.62);
+  --overlay-heavy: rgba(0, 0, 0, 0.82);
+  --gradient-gold: linear-gradient(
+    180deg,
+    #f2d298 0%,
+    #d4a84b 50%,
+    #b8860b 100%
+  );
+  --gradient-purple: linear-gradient(
+    135deg,
+    #5b2d82 0%,
+    #3d1b5d 60%,
+    #1a0a2e 100%
+  );
+  --glow-purple: 0 0 24px rgba(124, 58, 237, 0.22);
+  --glow-gold: 0 0 20px rgba(242, 210, 152, 0.15);
   --container-xl: 1440px;
   --container-lg: 1240px;
   --container-md: 1100px;
   --radius-sm: 4px;
   --radius-md: 10px;
   --radius-lg: 18px;
-  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.32);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.45);
   --transition-fast: 180ms ease;
   --transition-base: 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
   --transition-slow: 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -85,7 +101,7 @@
   }
 
   ::selection {
-    background: rgba(226, 172, 36, 0.28);
+    background: rgba(242, 210, 152, 0.28);
     color: var(--text-primary);
   }
 
@@ -141,6 +157,10 @@
   }
 }
 
+.bg-hours {
+  background: var(--gradient-purple);
+}
+
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
@@ -162,14 +182,14 @@
 }
 
 .btn-primary {
-  background: var(--gold-bright);
-  color: #080808;
+  background: var(--gradient-gold);
+  color: #0b0905;
   border: 1px solid var(--gold-bright);
 }
 
 .btn-primary:hover {
-  background: #f3d56a;
-  border-color: #f3d56a;
+  background: linear-gradient(180deg, #f5deb8 0%, #e8c468 50%, #c9a030 100%);
+  border-color: var(--gold-bright);
   transform: translateY(-1px);
 }
 
@@ -186,7 +206,7 @@
 
 .dotted-leader {
   flex: 1;
-  border-bottom: 1px dotted rgba(245, 240, 232, 0.28);
+  border-bottom: 1px dotted rgba(212, 208, 204, 0.28);
   margin: 0 10px 6px;
   min-width: 24px;
 }

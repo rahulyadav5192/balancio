@@ -30,7 +30,7 @@ export function Logo({
         height={500}
         priority={priority}
         className={cn(
-          "object-contain drop-shadow-[0_0_18px_rgba(226,172,36,0.22)]",
+          "object-contain drop-shadow-[0_0_18px_rgba(242,210,152,0.15)]",
           sizeClass,
         )}
       />

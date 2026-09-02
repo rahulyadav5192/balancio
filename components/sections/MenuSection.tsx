@@ -31,7 +31,7 @@ export function MenuSection() {
         <div className="relative mt-14 overflow-hidden bg-panel">
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute top-1/2 right-[-4%] hidden -translate-y-1/2 rotate-90 font-display text-[120px] tracking-[0.2em] text-syndicate/25 uppercase lg:block"
+            className="pointer-events-none absolute top-1/2 right-[-4%] hidden -translate-y-1/2 rotate-90 font-display text-[120px] tracking-[0.2em] text-purple/25 uppercase lg:block"
           >
             {activeLabel}
           </span>

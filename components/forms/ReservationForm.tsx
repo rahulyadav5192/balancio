@@ -44,7 +44,7 @@ function Field({
         {label}
       </span>
       {children}
-      {error ? <span className="mt-2 block text-xs text-red-soft">{error}</span> : null}
+      {error ? <span className="mt-2 block text-xs text-purple-bright">{error}</span> : null}
     </label>
   );
 }
@@ -162,7 +162,7 @@ export function ReservationForm() {
         <textarea name="request" rows={4} className={inputClass} />
       </Field>
       {state === "error" ? (
-        <p className="text-sm text-red-soft">
+        <p className="text-sm text-purple-bright">
           Something went wrong. Please try again or call the concierge desk.
         </p>
       ) : null}

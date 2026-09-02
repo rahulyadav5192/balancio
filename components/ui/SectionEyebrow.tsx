@@ -14,7 +14,7 @@ export function SectionEyebrow({
   return (
     <p
       className={cn(
-        "mb-4 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-red-soft",
+        "mb-4 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-purple-bright",
         align === "center" ? "text-center" : "text-left",
         className,
       )}
