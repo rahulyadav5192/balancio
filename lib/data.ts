@@ -98,7 +98,7 @@ export const menuTabs: { id: MenuCategory; label: string }[] = [
 
 export type MenuItemData = {
   name: string;
-  price: string;
+  price: number;
   description: string;
   image: string;
 };
@@ -107,28 +107,28 @@ export const menuItems: Record<MenuCategory, MenuItemData[]> = {
   starter: [
     {
       name: "Smoked Citrus Crostini",
-      price: "$25",
+      price: 2100,
       description:
         "Charred citrus, whipped ricotta, basil oil and toasted sourdough.",
       image: images.dishes.crostini,
     },
     {
       name: "Oyster Plateau",
-      price: "$38",
+      price: 3200,
       description:
         "A selection of East Coast oysters with champagne mignonette.",
       image: images.dishes.oyster,
     },
     {
       name: "Tuna Tartare",
-      price: "$32",
+      price: 2700,
       description:
         "Yellowfin, yuzu, sesame, and crisp shallot on black ceramic.",
       image: images.dishes.tartare,
     },
     {
       name: "Bone Marrow Toast",
-      price: "$28",
+      price: 2350,
       description:
         "Roasted marrow, parsley salad, sea salt, and grilled country loaf.",
       image: images.dishes.marrow,
@@ -137,28 +137,28 @@ export const menuItems: Record<MenuCategory, MenuItemData[]> = {
   main: [
     {
       name: "Wagyu Carpaccio",
-      price: "$48",
+      price: 4000,
       description:
         "Paper-thin ribeye, black truffle, aged parmesan, and caper oil.",
       image: images.dishes.wagyu,
     },
     {
       name: "Truffle Risotto",
-      price: "$42",
+      price: 3550,
       description:
         "Carnaroli rice, winter truffle, mascarpone, and a slow bone broth.",
       image: images.dishes.risotto,
     },
     {
       name: "Dry-Aged Ribeye",
-      price: "$78",
+      price: 6500,
       description:
         "Forty-day aged steak, bone marrow butter, and charred alliums.",
       image: images.dishes.ribeye,
     },
     {
       name: "Seared Scallops",
-      price: "$54",
+      price: 4500,
       description:
         "Diver scallops, brown butter, cauliflower velvet, and lemon thyme.",
       image: images.dishes.scallops,
@@ -167,21 +167,21 @@ export const menuItems: Record<MenuCategory, MenuItemData[]> = {
   desserts: [
     {
       name: "Dark Chocolate Sphere",
-      price: "$22",
+      price: 1850,
       description:
         "Valrhona shell, smoked salt caramel, and warm espresso sauce.",
       image: images.dishes.chocolate,
     },
     {
       name: "Vanilla Bean Panna Cotta",
-      price: "$18",
+      price: 1500,
       description:
         "Madagascar vanilla, blackcurrant gelée, and candied orange.",
       image: images.dishes.panna,
     },
     {
       name: "Burnt Honey Tart",
-      price: "$20",
+      price: 1700,
       description:
         "Shortcrust, burnt honey custard, and crème fraîche.",
       image: images.dishes.tart,
@@ -189,29 +189,29 @@ export const menuItems: Record<MenuCategory, MenuItemData[]> = {
   ],
   drinks: [
     {
-      name: "Midnight Old Fashioned",
-      price: "$24",
+      name: "Balenciao Old Fashioned",
+      price: 2000,
       description:
         "Private-cask bourbon, demerara, orange oil, and smoked cherry.",
       image: images.dishes.oldfashioned,
     },
     {
-      name: "Syndicate Negroni",
-      price: "$22",
+      name: "Balenciao Negroni",
+      price: 1850,
       description:
         "House-infused gin, bitter vermouth, and a single large cube.",
       image: images.dishes.negroni,
     },
     {
       name: "Smoke & Velvet",
-      price: "$26",
+      price: 2200,
       description:
         "Mezcal, cacao, chile tincture, and a whisper of cream.",
       image: images.dishes.smoke,
     },
     {
       name: "Golden Hour Martini",
-      price: "$24",
+      price: 2000,
       description:
         "Barrel-rested gin, dry vermouth, gold leaf, and lemon essence.",
       image: images.dishes.martini,
@@ -219,32 +219,71 @@ export const menuItems: Record<MenuCategory, MenuItemData[]> = {
   ],
 };
 
+export const events = [
+  {
+    slug: "sufi-night",
+    title: "Sufi Night",
+    category: "Live Performance",
+    day: "SAT",
+    date: "24",
+    month: "MAY",
+    time: "9:00 PM Onwards",
+    availability: "2 Tables Left",
+    soldOut: false,
+    image: images.gallery[0],
+    href: "/reservation",
+  },
+  {
+    slug: "jazz-evening",
+    title: "Jazz Evening",
+    category: "Live Music",
+    day: "FRI",
+    date: "30",
+    month: "MAY",
+    time: "8:30 PM Onwards",
+    availability: "5 Tables Left",
+    soldOut: false,
+    image: images.gallery[1],
+    href: "/reservation",
+  },
+  {
+    slug: "dj-rohan-live",
+    title: "DJ Rohan Live",
+    category: "DJ Night",
+    day: "SAT",
+    date: "7",
+    month: "JUN",
+    time: "10:00 PM Onwards",
+    availability: "Sold Out",
+    soldOut: true,
+    image: images.gallery[2],
+    href: "/reservation",
+  },
+] as const;
+
 export const testimonials = [
   {
-    title: "An Evening Worth Remembering",
+    title: "An Anniversary We Still Talk About",
     quote:
-      "The room understands silence as much as it understands a well-made drink. Every pour felt considered, and the service never interrupted the night.",
-    name: "Alexander Reid",
-    role: "Founder, Reid Creative Agency",
+      "We booked a VIP table for our anniversary and the team remembered every detail from our reservation. The Sufi Night set the perfect tone — intimate, elegant, and entirely ours.",
+    name: "Priya & Rahul Malhotra",
+    role: "Anniversary Celebration, May 2025",
     avatar: images.avatars[0],
-    sample: true,
   },
   {
-    title: "Quiet Luxury, Perfectly Paced",
+    title: "Where We Bring Clients After Hours",
     quote:
-      "Midnight Syndicate is the rare venue that feels both intimate and ceremonial. The cocktails are composed like tasting courses — precise, warm, unforgettable.",
-    name: "Eleanor Vance",
-    role: "Art Curator & Collector",
+      "Balenciao is the room we choose when the evening needs to impress without feeling forced. The service is discreet, the cocktails are sharp, and the energy stays refined.",
+    name: "Vikram Mehta",
+    role: "Managing Director, Mehta Capital",
     avatar: images.avatars[1],
-    sample: true,
   },
   {
-    title: "The Standard We Now Expect",
+    title: "Effortless From Valet To Last Pour",
     quote:
-      "We hosted a private gathering after a long week of travel. The team anticipated every preference. It is hospitality with genuine discretion.",
-    name: "Marcus Chen",
-    role: "CEO, Global Dynamics",
+      "From the valet at Connaught Place to the final round, everything feels considered. It is one of the few places in Delhi where the music, lighting, and hospitality actually agree.",
+    name: "Ananya Kapoor",
+    role: "Regular Guest & Gold Member",
     avatar: images.avatars[2],
-    sample: true,
   },
 ] as const;

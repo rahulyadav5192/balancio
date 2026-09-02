@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { MenuItemData } from "@/lib/data";
+import { formatPrice } from "@/lib/format";
 
 export function MenuItem({ item }: { item: MenuItemData }) {
   return (
@@ -18,7 +19,7 @@ export function MenuItem({ item }: { item: MenuItemData }) {
           </h3>
           <span className="dotted-leader" aria-hidden="true" />
           <span className="font-sans text-sm font-semibold text-gold">
-            {item.price}
+            {formatPrice(item.price)}
           </span>
         </div>
         <p className="mt-2 text-sm leading-6 text-muted">{item.description}</p>

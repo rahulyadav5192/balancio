@@ -49,7 +49,7 @@ export function StorySection() {
         <div className="mt-16 grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <p className="max-w-[480px] text-[15px] leading-7 text-ivory-muted">
-              Founded as a private after-hours salon, Midnight Syndicate gathers
+              Founded as a private after-hours salon, Balenciao gathers
               those who prefer their evenings composed. We source rare spirits,
               age our own infusions, and keep the lights low enough that the
               drink — and the company — remain the spectacle.

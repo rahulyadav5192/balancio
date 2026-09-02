@@ -2,8 +2,9 @@ import { site } from "@/lib/site";
 
 const links = [
   { label: "IG", href: site.social.instagram },
-  { label: "YT", href: site.social.youtube },
   { label: "FB", href: site.social.facebook },
+  { label: "YT", href: site.social.youtube },
+  { label: "TT", href: site.social.tiktok },
 ];
 
 export function SocialRail() {

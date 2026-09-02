@@ -20,7 +20,7 @@ export function ContactSection() {
           <Reveal className="relative mx-auto max-w-[720px] text-center">
             <SectionEyebrow>Contact Us</SectionEyebrow>
             <h2 className="font-display text-[42px] text-ivory md:text-[58px]">
-              Your Night At The Syndicate
+              Your Night At Balenciao
               <br />
               Awaits.
             </h2>

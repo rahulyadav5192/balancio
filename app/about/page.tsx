@@ -8,7 +8,7 @@ import { images } from "@/lib/images";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The story, philosophy, and rooms of Midnight Syndicate — a private cocktail lounge after dark.",
+    "The story, philosophy, and rooms of Balenciao — a premium night club and restaurant after dark.",
 };
 
 const milestones = [
@@ -32,7 +32,7 @@ export default function AboutPage() {
               Hospitality As A Quiet Craft.
             </h2>
             <p className="mt-6 max-w-[520px] text-[15px] leading-7 text-ivory-muted">
-              Midnight Syndicate was created for those who prefer their evenings
+              Balenciao was created for those who prefer their evenings
               composed. We believe luxury is a matter of pacing: the right
               glass, the right light, and a room that does not rush you.
             </p>

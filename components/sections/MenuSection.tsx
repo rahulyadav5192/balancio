@@ -9,6 +9,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { menuItems, menuTabs, type MenuCategory } from "@/lib/data";
 import { images } from "@/lib/images";
+import { site } from "@/lib/site";
 
 export function MenuSection() {
   const [active, setActive] = useState<MenuCategory>("starter");
@@ -26,6 +27,7 @@ export function MenuSection() {
             <br />
             Served With Intention.
           </h2>
+          <p className="mt-4 text-sm text-muted">{site.currency.label}</p>
         </Reveal>
 
         <div className="relative mt-14 overflow-hidden bg-panel">

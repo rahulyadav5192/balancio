@@ -7,7 +7,7 @@ import { images } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Order",
   description:
-    "Request table service from the Midnight Syndicate kitchen and bar.",
+    "Request table service from the Balenciao kitchen and bar.",
 };
 
 export default function OrderPage() {

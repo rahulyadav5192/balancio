@@ -45,9 +45,6 @@ export function TestimonialCard({ item, featured = false }: TestimonialCardProps
             </p>
           </div>
         </div>
-        <p className="mt-4 text-[10px] tracking-[0.14em] text-muted uppercase">
-          Sample testimonial
-        </p>
       </div>
     </article>
   );

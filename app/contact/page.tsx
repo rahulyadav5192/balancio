@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Speak with the Midnight Syndicate concierge team about reservations, private events, and arrival details.",
+    "Speak with the Balenciao concierge team about reservations, private events, and arrival details.",
 };
 
 export default function ContactPage() {
@@ -49,15 +49,15 @@ export default function ContactPage() {
                   {block.label}: {block.opens} – {block.closes}
                 </p>
               ))}
-              <p>Dress: dark, considered, no sportswear after 19:00.</p>
-              <p>Valet is available on Mercer Lane from opening until close.</p>
+              <p>Dress: dark, considered, no sportswear after 7 PM.</p>
+              <p>Valet parking is available at P-Block, Connaught Place.</p>
             </div>
             <div className="mt-10 aspect-[4/3] overflow-hidden border border-white/10">
               <iframe
-                title="Map of Midnight Syndicate"
+                title="Map of Balenciao"
                 className="h-full w-full grayscale invert"
                 loading="lazy"
-                src="https://maps.google.com/maps?q=18%20Mercer%20Street%20New%20York&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Connaught%20Place%20New%20Delhi%20110001&t=&z=15&ie=UTF8&iwloc=&output=embed"
               />
             </div>
           </aside>
