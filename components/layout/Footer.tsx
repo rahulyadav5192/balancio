@@ -14,7 +14,7 @@ function XIcon() {
 }
 
 const iconBtn =
-  "flex h-11 w-11 items-center justify-center rounded-full bg-red-deep text-ivory transition-colors hover:bg-syndicate";
+  "flex h-11 w-11 items-center justify-center rounded-full bg-purple-deep text-ivory transition-colors hover:bg-purple";
 
 export function Footer() {
   return (

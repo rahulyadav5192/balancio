@@ -31,7 +31,7 @@ export default function ContactPage() {
             </div>
           </div>
           <aside className="border border-white/10 bg-panel p-8 md:p-12">
-            <p className="text-[11px] tracking-[0.16em] text-red-soft uppercase">Visit</p>
+            <p className="text-[11px] tracking-[0.16em] text-purple-bright uppercase">Visit</p>
             <p className="mt-4 font-display text-[32px] text-ivory">{site.address.display}</p>
             <div className="mt-8 space-y-4 text-sm text-ivory-muted">
               <p>

@@ -58,21 +58,21 @@ export function ContactForm() {
           Name
         </span>
         <input name="name" className={inputClass} autoComplete="name" />
-        {errors.name ? <span className="mt-2 block text-xs text-red-soft">{errors.name}</span> : null}
+        {errors.name ? <span className="mt-2 block text-xs text-purple-bright">{errors.name}</span> : null}
       </label>
       <label className="block">
         <span className="mb-2 block text-[11px] font-semibold tracking-[0.14em] text-ivory-muted uppercase">
           Email
         </span>
         <input name="email" type="email" className={inputClass} autoComplete="email" />
-        {errors.email ? <span className="mt-2 block text-xs text-red-soft">{errors.email}</span> : null}
+        {errors.email ? <span className="mt-2 block text-xs text-purple-bright">{errors.email}</span> : null}
       </label>
       <label className="block">
         <span className="mb-2 block text-[11px] font-semibold tracking-[0.14em] text-ivory-muted uppercase">
           Phone
         </span>
         <input name="phone" type="tel" className={inputClass} autoComplete="tel" />
-        {errors.phone ? <span className="mt-2 block text-xs text-red-soft">{errors.phone}</span> : null}
+        {errors.phone ? <span className="mt-2 block text-xs text-purple-bright">{errors.phone}</span> : null}
       </label>
       <label className="block">
         <span className="mb-2 block text-[11px] font-semibold tracking-[0.14em] text-ivory-muted uppercase">
@@ -80,11 +80,11 @@ export function ContactForm() {
         </span>
         <textarea name="message" rows={5} className={inputClass} />
         {errors.message ? (
-          <span className="mt-2 block text-xs text-red-soft">{errors.message}</span>
+          <span className="mt-2 block text-xs text-purple-bright">{errors.message}</span>
         ) : null}
       </label>
       {state === "error" ? (
-        <p className="text-sm text-red-soft">Unable to send. Please try again.</p>
+        <p className="text-sm text-purple-bright">Unable to send. Please try again.</p>
       ) : null}
       <Button type="submit" disabled={state === "submitting"}>
         {state === "submitting" ? "Sending…" : "Send Message"}

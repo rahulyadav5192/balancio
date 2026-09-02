@@ -4,7 +4,7 @@
 
 Create a premium nightlife / private club website inspired by the supplied screenshots. The visual identity should feel **exclusive, cinematic, elegant, luxurious, mysterious, and editorial** rather than like a generic nightclub template.
 
-The design is primarily a **black + warm gold + deep red** experience with large serif headlines, dark photography, thin gold borders, subtle ambient textures, and carefully controlled spacing.
+The design is primarily a **matte black + champagne gold + deep purple** experience with large serif headlines, dark photography, thin gold borders, subtle purple ambient glows, and carefully controlled spacing.
 
 The website should communicate:
 
@@ -26,15 +26,15 @@ The layout should be responsive and work cleanly on desktop, tablet, and mobile.
 
 Keywords:
 
-`Exclusive` · `Dark` · `Cinematic` · `Refined` · `Intimate` · `Luxury` · `Editorial` · `Handcrafted` · `Nightlife`
+`Exclusive` · `Dark` · `Nocturnal` · `Cinematic` · `Refined` · `Intimate` · `Luxury` · `Editorial` · `Handcrafted` · `Nightlife`
 
 Avoid:
 
 - Neon cyberpunk visuals
-- Bright gradients
+- Bright or saturated rainbow gradients
 - Overly flashy nightclub animations
 - Cheap gold effects
-- Excessive glow
+- Uncontrolled or excessive glow
 - Generic bootstrap-card styling
 - Very rounded SaaS-like components
 - Bright white backgrounds
@@ -58,50 +58,80 @@ The experience should prioritize:
 
 Use CSS variables for all brand colors.
 
+The palette follows a **Luxury Dark Mode** direction: deep matte black foundations, champagne-gold metallic accents, and royal purple highlights for interactive states, VIP emphasis, and atmospheric glow.
+
 ```css
 :root {
-  --bg-primary: #030303;
-  --bg-secondary: #080808;
-  --bg-elevated: #111111;
-  --bg-card: #151515;
+  --bg-primary: #000000;
+  --bg-secondary: #0A0A0A;
+  --bg-elevated: #121212;
+  --bg-card: #1A1A1A;
 
-  --text-primary: #F5F0E8;
-  --text-secondary: #C7C1B8;
-  --text-muted: #8F8A83;
+  --text-primary: #FFFFFF;
+  --text-secondary: #D4D0CC;
+  --text-muted: #8A8680;
 
-  --gold: #E2AC24;
-  --gold-bright: #F6BE2C;
-  --gold-soft: #B78624;
-  --gold-dark: #6F5015;
+  --gold: #D4A84B;
+  --gold-bright: #F2D298;
+  --gold-soft: #C9A050;
+  --gold-dark: #8B6914;
 
-  --red: #B00008;
-  --red-deep: #7F0005;
-  --red-soft: #CF1B22;
+  --purple: #5B2D82;
+  --purple-deep: #3D1B5D;
+  --purple-bright: #7C3AED;
+  --purple-soft: #4A2568;
 
-  --border-dark: #292929;
-  --border-gold: rgba(226, 172, 36, 0.65);
-  --overlay-dark: rgba(0, 0, 0, 0.58);
-  --overlay-heavy: rgba(0, 0, 0, 0.78);
+  --border-dark: #2A2A2A;
+  --border-gold: rgba(242, 210, 152, 0.55);
+  --border-purple: rgba(124, 58, 237, 0.45);
+  --overlay-dark: rgba(0, 0, 0, 0.62);
+  --overlay-heavy: rgba(0, 0, 0, 0.82);
+
+  --gradient-gold: linear-gradient(
+    180deg,
+    #F2D298 0%,
+    #D4A84B 50%,
+    #B8860B 100%
+  );
+
+  --gradient-purple: linear-gradient(
+    135deg,
+    #5B2D82 0%,
+    #3D1B5D 60%,
+    #1A0A2E 100%
+  );
+
+  --glow-purple: 0 0 24px rgba(124, 58, 237, 0.22);
+  --glow-gold: 0 0 20px rgba(242, 210, 152, 0.15);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 ```
 
+## Visual Atmosphere
+
+The overall mood should feel **nocturnal, exclusive, and high-end** — like a dimly lit VIP lounge with warm spotlighting and subtle purple neon accents. Surfaces sit just barely above the black background; depth comes from tone shifts, thin borders, and restrained glow rather than harsh contrast.
+
 ## Usage Rules
 
-- Main backgrounds: almost-black, not pure flat black everywhere.
+- Main backgrounds: matte near-black (`#000000`–`#0A0A0A`). Surfaces are only slightly lighter charcoal (`#121212`–`#1A1A1A`).
 - Gold is reserved for:
-  - CTA buttons
-  - borders
-  - active navigation
-  - important phrases
+  - CTA buttons (champagne-to-bronze gradient)
+  - borders and active navigation
+  - important phrases and headings
   - ornamental details
   - menu pricing
-- Red is used sparingly for:
+  - icon strokes
+- Purple is used sparingly for:
   - section eyebrows
   - decorative stars / diamonds
-  - subtle accent lines
+  - selected / active states
+  - VIP and featured card highlights
+  - subtle accent lines and link highlights
   - testimonial indicators
+  - restrained radial glows behind key elements
 - White/off-white is used for major typography.
 - Body copy should use muted warm gray rather than pure white.
+- Avoid harsh white dividers; separate content with spacing and subtle dark-tone shifts.
 
 ---
 
@@ -358,10 +388,10 @@ Hover:
 
 ### Reservation Button
 
-Gold filled CTA.
+Gold filled CTA with champagne gradient.
 
 ```css
-background: var(--gold-bright);
+background: var(--gradient-gold);
 color: #0B0905;
 padding: 15px 24px;
 font-weight: 700;
@@ -378,7 +408,7 @@ When scrolling past hero:
 - header becomes sticky
 - black background at ~88–94% opacity
 - slight backdrop blur
-- bottom border: `rgba(226,172,36,.18)`
+- bottom border: `rgba(242,210,152,.18)`
 - height reduces slightly
 
 ---
@@ -449,6 +479,7 @@ Overlays:
 1. Overall black opacity
 2. Dark gradient near top for nav readability
 3. Bottom vignette
+4. Optional very subtle purple radial glow behind hero content (`rgba(124, 58, 237, 0.08)`)
 
 Example:
 
@@ -557,12 +588,12 @@ Style:
 ```css
 font-size: 11px;
 font-weight: 700;
-color: var(--red-soft);
+color: var(--purple-bright);
 text-transform: uppercase;
 letter-spacing: .08em;
 ```
 
-Use red diamond/star ornaments before and after.
+Use purple diamond/star ornaments before and after.
 
 Spacing:
 `margin-bottom: 16px`
@@ -631,7 +662,7 @@ Link:
 
 ## Background Treatment
 
-The section remains dark, with a subtle oversized bottle, barrel, typography, or abstract photo at very low opacity behind the content.
+The section remains dark, with a subtle oversized bottle, barrel, typography, or abstract photo at very low opacity behind the content. Optionally add a faint purple radial ambient glow at section edges.
 
 ---
 
@@ -740,7 +771,7 @@ Private Casks
 ```
 
 Each has:
-- red line icon
+- purple line icon
 - uppercase label
 - 2–3 lines explanation
 
@@ -771,7 +802,7 @@ Image subjects:
 - bar counter
 - dining room
 - cocktail station
-- red-lit lounge
+- purple-lit lounge
 - bartender / bottle wall
 
 Interactions:
@@ -803,12 +834,12 @@ Left:
 - reservation + contact buttons
 
 Right:
-large red information card.
+large purple information card.
 
-## Red Hours Card
+## Purple Hours Card
 
 Background:
-`#A70007` or similar
+`var(--gradient-purple)` or `#3D1B5D` with subtle inner glow
 
 Padding:
 `52–72px`
@@ -858,7 +889,7 @@ Three columns:
 3. Exclusive Atmosphere
 
 Each feature:
-- red line icon
+- purple line icon
 - heading
 - short description
 
@@ -913,11 +944,11 @@ Right:
 large arched cocktail image
 
 Background:
-charcoal panel `#151515`
+charcoal panel `#1A1A1A`
 
 Optional giant decorative rotated word:
 `STARTER`
-in dark red at far right edge.
+in deep purple at far right edge.
 
 ### Menu Item
 
@@ -968,7 +999,7 @@ Buttons:
 
 Container:
 - dark overlay
-- 1px subtle border
+- 1px subtle border (`var(--border-dark)` or `var(--border-gold)`)
 - rounded corners 8–12px max
 
 Avoid modern pill-shaped design.
@@ -986,14 +1017,15 @@ The Voices Of The Syndicate.
 Use 3 testimonials desktop.
 
 Cards:
-- dark charcoal
-- thin dark gray border
+- dark charcoal (`#1A1A1A`)
+- thin dark gray border (`var(--border-dark)`)
 - 24–32px padding
 - mostly square geometry
 
 Middle active card:
 - gold border
 - slightly brighter background
+- faint purple outer glow (`var(--glow-purple)`)
 - large gold quote symbol placed near top edge
 
 Each card:
@@ -1007,7 +1039,7 @@ Each card:
 
 Carousel controls:
 3 dots below.
-Active dot can be outlined in red.
+Active dot can be outlined in purple.
 
 Desktop can show 3.
 Tablet: 2.
@@ -1040,7 +1072,7 @@ Social icons:
 - Instagram
 - LinkedIn
 
-Icons inside dark-red circular buttons.
+Icons inside dark-purple circular buttons.
 
 Footer bottom can optionally add:
 - copyright
@@ -1056,7 +1088,7 @@ Footer bottom can optionally add:
 
 ```css
 .btn-primary {
-  background: var(--gold-bright);
+  background: var(--gradient-gold);
   color: #080808;
   border: 1px solid var(--gold-bright);
   padding: 14px 22px;
@@ -1068,7 +1100,7 @@ Footer bottom can optionally add:
 ```
 
 Hover:
-- background becomes pale-gold
+- background shifts to lighter champagne tones
 - subtle transform `translateY(-1px)`
 
 ## Secondary
@@ -1101,16 +1133,16 @@ Image style should be consistent.
 Use photos with:
 
 - Low-key lighting
-- Warm tungsten highlights
-- Deep blacks
+- Warm tungsten and champagne highlights
+- Deep blacks and matte charcoal surfaces
 - Amber / gold tones
+- Deep purple / violet ambient glow
 - Dark wood
 - Brass
 - Premium glassware
 - High-end cocktails
 - Black clothing
-- Burgundy accents
-- Moody venue interiors
+- Moody venue interiors with subtle purple accent lighting
 
 ## Avoid
 
@@ -1118,7 +1150,7 @@ Use photos with:
 - Fluorescent lighting
 - Cheap party photos
 - Overexposed nightclub crowds
-- Blue/purple rave imagery
+- Strobe-heavy rave imagery
 - Stock photos with obvious corporate feel
 
 ## Recommended Image Subjects
@@ -1173,7 +1205,7 @@ Use repeated elements to create cohesion.
 Recommended motifs:
 
 - gold thin lines
-- red star / diamond
+- purple star / diamond
 - arched frames
 - gold corner brackets
 - subtle cursive background words
@@ -1181,6 +1213,7 @@ Recommended motifs:
 - tiny gold dots
 - dark barrel / bottle texture
 - fine-line cocktail icons
+- restrained purple radial glows behind featured elements
 
 Keep ornaments restrained.
 
@@ -1196,6 +1229,7 @@ Examples:
 - bar shelf
 - bottle silhouette
 - grain texture
+- soft purple radial gradients at very low opacity
 
 Opacity:
 `0.03–0.12`
@@ -1304,6 +1338,7 @@ Hero:
 Hover:
 - image scale
 - gold border brighten
+- purple glow intensifies on selected / featured elements
 - link letter-spacing increase slightly
 
 ## Avoid
@@ -1339,7 +1374,7 @@ Minimum requirements:
 - Escape key closes menu/modal.
 - Images need useful `alt` descriptions.
 - Decorative images use empty alt.
-- Never use only red/gold color to communicate state.
+- Never use only purple/gold color to communicate state.
 - Buttons should be at least 44px tall on mobile.
 
 Suggested focus:
@@ -1659,22 +1694,22 @@ Include:
 
 The final desktop build should visibly preserve these characteristics from the reference:
 
-- [ ] black cinematic background
+- [ ] matte black cinematic background
 - [ ] slim gold outer frame
 - [ ] absolute transparent header over hero
 - [ ] large white serif hero typography
 - [ ] script hero accent
 - [ ] bartender/bar imagery
-- [ ] gold CTAs
-- [ ] red section eyebrows
+- [ ] champagne gold gradient CTAs
+- [ ] purple section eyebrows
 - [ ] arched image frames
 - [ ] editorial 2-column storytelling
 - [ ] gold decorative corner frames
 - [ ] horizontal image gallery
-- [ ] red opening-hours card
+- [ ] purple opening-hours card
 - [ ] three-column feature section
 - [ ] dark menu panel
-- [ ] testimonial cards
+- [ ] testimonial cards with purple glow on active
 - [ ] image-backed footer
 - [ ] high contrast
 - [ ] generous spacing
@@ -1708,7 +1743,13 @@ The final desktop build should visibly preserve these characteristics from the r
   --radius-lg: 18px;
 
   --shadow-soft:
-    0 20px 60px rgba(0, 0, 0, 0.32);
+    0 20px 60px rgba(0, 0, 0, 0.45);
+
+  --glow-purple:
+    0 0 24px rgba(124, 58, 237, 0.22);
+
+  --glow-gold:
+    0 0 20px rgba(242, 210, 152, 0.15);
 
   --transition-fast:
     180ms ease;
@@ -1755,13 +1796,15 @@ Stripe if deposits or prepaid bookings are needed
 theme: {
   extend: {
     colors: {
-      background: "#030303",
-      panel: "#151515",
-      ivory: "#F5F0E8",
-      muted: "#8F8A83",
-      gold: "#E2AC24",
-      goldBright: "#F6BE2C",
-      syndicateRed: "#B00008",
+      background: "#000000",
+      panel: "#1A1A1A",
+      ivory: "#FFFFFF",
+      muted: "#8A8680",
+      gold: "#D4A84B",
+      goldBright: "#F2D298",
+      purple: "#5B2D82",
+      purpleDeep: "#3D1B5D",
+      purpleBright: "#7C3AED",
     },
     fontFamily: {
       display: ["Cormorant Garamond", "serif"],
@@ -1845,6 +1888,6 @@ The user should immediately understand that the venue is premium, then quickly f
 
 Build the site as a dark editorial nightlife experience featuring:
 
-**Black cinematic backgrounds + warm gold accents + restrained deep red + oversized elegant serif typography + dramatic bartender/interior photography + arched imagery + fine decorative framing + strong reservation CTAs.**
+**Matte black cinematic backgrounds + champagne gold gradient accents + restrained deep purple highlights + oversized elegant serif typography + dramatic bartender/interior photography + arched imagery + fine decorative framing + strong reservation CTAs.**
 
 The page should feel immersive and premium on desktop while remaining clean, fast, and easy to navigate on mobile.
