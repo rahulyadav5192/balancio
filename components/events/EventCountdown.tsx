@@ -55,17 +55,19 @@ export function EventCountdown({ startsAt, imageSide }: EventCountdownProps) {
 
   return (
     <div
-      className={`flex shrink-0 items-center bg-white/[0.02] px-3 py-4 backdrop-blur-md sm:px-4 ${
-        imageSide === "left" ? "rounded-r-[20px]" : "rounded-l-[20px]"
+      className={`flex w-full shrink-0 items-center justify-center bg-white/[0.02] px-3 py-4 backdrop-blur-md sm:w-auto sm:justify-start sm:px-4 ${
+        imageSide === "left"
+          ? "rounded-b-[20px] sm:rounded-b-none sm:rounded-r-[20px]"
+          : "rounded-b-[20px] sm:rounded-b-none sm:rounded-l-[20px]"
       }`}
       aria-live="polite"
       aria-label="Event countdown"
     >
-      <ul className="flex flex-col gap-3 sm:gap-4">
+      <ul className="grid w-full grid-cols-2 gap-3 sm:flex sm:w-auto sm:flex-col sm:gap-4">
         {units.map(({ key, label }) => (
           <li
             key={key}
-            className="flex min-h-[70px] min-w-[70px] flex-col items-center justify-center rounded-md border border-purple/45 bg-black/30 px-2 text-center shadow-[0_0_18px_rgba(124,58,237,0.12)]"
+            className="flex min-h-[70px] w-full flex-col items-center justify-center rounded-md border border-purple/45 bg-black/30 px-2 text-center shadow-[0_0_18px_rgba(124,58,237,0.12)] sm:min-w-[70px]"
           >
             <span className="font-display text-[22px] leading-none text-ivory sm:text-[28px]">
               {String(countdown[key]).padStart(2, "0")}

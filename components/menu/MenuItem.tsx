@@ -4,21 +4,21 @@ import { formatPrice } from "@/lib/format";
 
 export function MenuItem({ item }: { item: MenuItemData }) {
   return (
-    <article className="flex gap-4">
+    <article className="flex gap-3 sm:gap-4">
       <Image
         src={item.image}
         alt=""
         width={72}
         height={72}
-        className="h-[72px] w-[72px] shrink-0 rounded-full object-cover"
+        className="h-[56px] w-[56px] shrink-0 rounded-full object-cover sm:h-[72px] sm:w-[72px]"
       />
       <div className="min-w-0 flex-1">
-        <div className="flex items-end">
-          <h3 className="font-display text-[22px] leading-none text-ivory">
+        <div className="flex items-end gap-1">
+          <h3 className="shrink font-display text-[18px] leading-none text-ivory sm:text-[22px]">
             {item.name}
           </h3>
           <span className="dotted-leader" aria-hidden="true" />
-          <span className="font-sans text-sm font-semibold text-gold">
+          <span className="shrink-0 font-sans text-sm font-semibold text-gold">
             {formatPrice(item.price)}
           </span>
         </div>

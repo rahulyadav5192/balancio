@@ -13,7 +13,7 @@ export function MenuTabs({ active, onChange }: MenuTabsProps) {
     <div
       role="tablist"
       aria-label="Menu categories"
-      className="flex gap-8 overflow-x-auto pb-2"
+      className="flex gap-5 overflow-x-auto pb-2 sm:gap-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
       {menuTabs.map((tab) => {
         const isActive = tab.id === active;

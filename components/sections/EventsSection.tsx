@@ -38,7 +38,7 @@ function EventCard({
         <div className="relative rounded-[20px] bg-gradient-to-b from-purple/30 to-[#1384CC]/30 p-[2px] shadow-[0_0_40px_rgba(124,58,237,0.12)]">
           <div
             className={cn(
-              "flex flex-col gap-10 rounded-[18px] bg-[#0a0a12]/95 p-6 lg:flex-row lg:items-center lg:gap-10 lg:p-8 xl:gap-12 xl:p-10",
+              "flex flex-col gap-6 rounded-[18px] bg-[#0a0a12]/95 p-4 sm:gap-8 sm:p-6 lg:flex-row lg:items-center lg:gap-10 lg:p-8 xl:gap-12 xl:p-10",
               reversed && "lg:flex-row-reverse",
             )}
           >
@@ -50,8 +50,10 @@ function EventCard({
             >
               <div
                 className={cn(
-                  "group overflow-hidden",
-                  imageSide === "left" ? "rounded-[22px] sm:rounded-r-none" : "rounded-[22px] sm:rounded-l-none",
+                  "group min-w-0 flex-1 overflow-hidden sm:flex-none",
+                  imageSide === "left"
+                    ? "rounded-t-[22px] sm:rounded-l-[22px] sm:rounded-r-none"
+                    : "rounded-t-[22px] sm:rounded-r-[22px] sm:rounded-l-none",
                 )}
               >
                 <Link
@@ -65,7 +67,7 @@ function EventCard({
                     width={540}
                     height={340}
                     sizes="(max-width: 1024px) 100vw, 540px"
-                    className="aspect-[4/3] h-[220px] w-full object-cover transition-transform duration-500 group-hover:scale-[1.15] sm:h-[300px] sm:w-[min(100%,420px)] lg:h-[320px] lg:w-[min(100%,480px)] xl:h-[340px] xl:w-[min(100%,540px)]"
+                    className="aspect-[4/3] h-[200px] w-full object-cover transition-transform duration-500 group-hover:scale-[1.15] sm:h-[300px] sm:w-[min(100%,420px)] lg:h-[320px] lg:w-[min(100%,480px)] xl:h-[340px] xl:w-[min(100%,540px)]"
                   />
                 </Link>
               </div>
@@ -74,7 +76,7 @@ function EventCard({
 
             <div className="min-w-0 flex-1 lg:pl-2">
               <div className="max-w-[460px]">
-                <h3 className="font-display text-[24px] leading-snug text-ivory md:text-[26px]">
+                <h3 className="font-display text-[22px] leading-snug text-ivory sm:text-[24px] md:text-[26px]">
                   {event.title}
                 </h3>
                 <GradientLine className="my-4 ml-0" />
@@ -88,20 +90,20 @@ function EventCard({
                 ))}
               </div>
 
-              <div className="mt-8 grid gap-5 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-5">
-                <p className="flex items-center gap-4 text-base text-ivory-muted">
+              <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-5">
+                <p className="flex items-center gap-3 text-sm text-ivory-muted sm:gap-4 sm:text-base">
                   <Calendar size={18} className="shrink-0 text-gold" aria-hidden="true" />
                   {event.displayDate}
                 </p>
-                <p className="flex items-center gap-4 text-base text-ivory-muted">
+                <p className="flex items-center gap-3 text-sm text-ivory-muted sm:gap-4 sm:text-base">
                   <Clock size={18} className="shrink-0 text-gold" aria-hidden="true" />
                   {event.time}
                 </p>
-                <p className="flex items-center gap-4 text-base text-ivory-muted">
+                <p className="flex items-center gap-3 text-sm text-ivory-muted sm:gap-4 sm:text-base">
                   <IndianRupee size={18} className="shrink-0 text-gold" aria-hidden="true" />
                   {event.priceRange}
                 </p>
-                <p className="flex items-center gap-4 text-base text-ivory-muted">
+                <p className="flex items-center gap-3 text-sm text-ivory-muted sm:gap-4 sm:text-base">
                   <MapPin size={18} className="shrink-0 text-gold" aria-hidden="true" />
                   {event.location}
                 </p>
@@ -129,7 +131,7 @@ export function EventsSection() {
   return (
     <section
       id="events"
-      className="relative overflow-hidden bg-[#050508] py-24 md:py-32 lg:py-36"
+      className="relative overflow-hidden bg-[#050508] py-16 sm:py-24 md:py-32 lg:py-36"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(124,58,237,0.14),transparent_55%)]"
@@ -153,11 +155,11 @@ export function EventsSection() {
             >
               Events
             </p>
-            <h2 className="relative font-display text-[34px] text-ivory md:text-[42px] lg:text-[48px]">
+            <h2 className="relative font-display text-[28px] text-ivory sm:text-[34px] md:text-[42px] lg:text-[48px]">
               Upcoming Events
             </h2>
             <GradientLine className="mx-auto my-5" />
-            <p className="relative mx-auto max-w-[500px] text-[15px] leading-7 text-ivory-muted md:text-[18px]">
+            <p className="relative mx-auto max-w-[500px] px-1 text-[14px] leading-7 text-ivory-muted sm:text-[15px] md:text-[18px]">
               Celebrate the rhythm, energy, and passion of the artists you love,
               all in one unforgettable experience.
             </p>
