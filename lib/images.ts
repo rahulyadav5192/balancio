@@ -1,5 +1,7 @@
 export const images = {
   hero: "/images/hero-bartender.jpg",
+  heroCraft: "/images/hero-bar-craft.jpg",
+  heroNight: "/images/hero-dj-crowd.jpg",
   tapRoom: "/images/experience-tap-room.jpg",
   mixology: "/images/experience-mixology.jpg",
   spiritBar: "/images/experience-spirit-bar.jpg",

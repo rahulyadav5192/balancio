@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { navigation, site } from "@/lib/site";
 
 type MobileMenuProps = {
@@ -100,9 +100,11 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </nav>
 
             <div className="pb-6">
-              <Button href="/reservation" className="w-full" onClick={onClose}>
-                Reservation
-              </Button>
+              <ReserveButton
+                href="/reservation"
+                className="w-full"
+                onClick={onClose}
+              />
               <p className="mt-5 text-center text-xs tracking-[0.16em] text-muted uppercase">
                 {site.phone}
               </p>

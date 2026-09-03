@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { DecorativeFrame } from "@/components/ui/DecorativeFrame";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
@@ -29,7 +30,7 @@ export function AboutSection() {
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/reservation">Reservation</Button>
+            <ReserveButton href="/reservation" />
             <Button href="/contact" variant="secondary">
               Get In Touch
             </Button>

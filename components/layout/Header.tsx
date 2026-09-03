@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { Logo } from "@/components/ui/Logo";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { navigation } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -79,9 +80,10 @@ export function Header() {
             >
               <ShoppingBag size={18} strokeWidth={1.6} />
             </Link>
-            <Link href="/reservation" className="btn-primary px-7">
-              Reservation
-            </Link>
+            <ReserveButton href="/reservation" compact className="shrink-0">
+              <span className="max-[1179px]:hidden">Reserve A Table</span>
+              <span className="min-[1180px]:hidden">Reservation</span>
+            </ReserveButton>
           </div>
 
           <button

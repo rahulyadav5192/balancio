@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
-import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { experiences } from "@/lib/data";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -33,7 +33,7 @@ export default async function ExperiencePage({ params }: Props) {
               {item.longform}
             </p>
             <div className="mt-10">
-              <Button href="/reservation">Reservation</Button>
+              <ReserveButton href="/reservation" />
             </div>
           </div>
           <div className="image-overlay overflow-hidden rounded-t-[200px] border border-gold/60">

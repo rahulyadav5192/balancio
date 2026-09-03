@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { images } from "@/lib/images";
@@ -30,7 +31,7 @@ export function HoursSection() {
             escape, reserve your place in advance and let the evening unfold.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/reservation">Reservation</Button>
+            <ReserveButton href="/reservation" />
             <Button href="/contact" variant="secondary">
               Get In Touch
             </Button>

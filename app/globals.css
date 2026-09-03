@@ -204,6 +204,178 @@
   color: #080808;
 }
 
+@property --gold-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.btn-reserve {
+  --gold-angle: 0deg;
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  min-height: 52px;
+  padding: 12px 22px 12px 20px;
+  overflow: visible;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(38, 38, 38, 0.97) 0%,
+      rgba(14, 14, 14, 0.98) 46%,
+      rgba(8, 8, 8, 1) 100%
+    )
+    padding-box,
+    conic-gradient(
+      from var(--gold-angle),
+      #a88840 0deg,
+      #c5a059 55deg,
+      #8f702e 130deg,
+      #b8954a 210deg,
+      #e8c878 255deg,
+      #fff6d0 278deg,
+      #f0d48a 300deg,
+      #a88840 335deg,
+      #a88840 360deg
+    )
+    border-box;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 18px rgba(212, 168, 75, 0.14);
+  animation: gold-orbit 2.8s linear infinite;
+  transition:
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn-reserve::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--gold-angle),
+    transparent 0deg,
+    transparent 248deg,
+    rgba(255, 244, 196, 0.2) 262deg,
+    #fff8dc 280deg,
+    rgba(255, 244, 196, 0.2) 298deg,
+    transparent 318deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: gold-orbit 2.8s linear infinite;
+}
+
+.btn-reserve::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--gold-angle),
+    transparent 0deg,
+    transparent 258deg,
+    rgba(255, 236, 170, 0.0) 268deg,
+    rgba(255, 236, 170, 0.55) 282deg,
+    rgba(255, 236, 170, 0.0) 296deg,
+    transparent 360deg
+  );
+  filter: blur(9px);
+  animation: gold-orbit 2.8s linear infinite;
+}
+
+.btn-reserve svg {
+  flex-shrink: 0;
+  color: #c9a86c;
+}
+
+.btn-reserve-divider {
+  width: 1px;
+  height: 16px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #c5a059 18%,
+    #c5a059 82%,
+    transparent
+  );
+}
+
+.btn-reserve-label {
+  line-height: 1;
+}
+
+.btn-reserve-arrow {
+  transition: transform 280ms ease;
+}
+
+.btn-reserve:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 26px rgba(232, 200, 120, 0.28);
+}
+
+.btn-reserve:hover .btn-reserve-arrow {
+  transform: translateX(4px);
+}
+
+.btn-reserve:disabled {
+  opacity: 0.55;
+  transform: none;
+  animation: none;
+  cursor: not-allowed;
+}
+
+.btn-reserve:disabled::before,
+.btn-reserve:disabled::after {
+  animation: none;
+}
+
+.btn-reserve-compact {
+  min-height: 44px;
+  gap: 0.65rem;
+  padding: 8px 16px 8px 14px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.btn-reserve-compact .btn-reserve-divider {
+  height: 14px;
+}
+
+@keyframes gold-orbit {
+  to {
+    --gold-angle: 360deg;
+  }
+}
+
 .dotted-leader {
   flex: 1;
   border-bottom: 1px dotted rgba(212, 208, 204, 0.28);

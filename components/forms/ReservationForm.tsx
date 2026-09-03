@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { cn } from "@/lib/utils";
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -178,9 +178,13 @@ export function ReservationForm() {
         </Link>
         .
       </p>
-      <Button type="submit" disabled={state === "submitting"} className="w-full md:w-auto">
-        {state === "submitting" ? "Sending request…" : "Submit Request"}
-      </Button>
+      <ReserveButton
+        type="submit"
+        disabled={state === "submitting"}
+        className="w-full md:w-auto"
+      >
+        {state === "submitting" ? "Sending request…" : "Reserve A Table"}
+      </ReserveButton>
     </form>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
-import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { LineIcon } from "@/components/ui/LineIcon";
 import { images } from "@/lib/images";
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
             team will arrange seating, pours, and pacing to suit the night.
           </p>
           <div className="mt-10">
-            <Button href="/reservation">Reservation</Button>
+            <ReserveButton href="/reservation" />
           </div>
         </div>
       </section>

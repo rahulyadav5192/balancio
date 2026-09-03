@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import { menuItems } from "@/lib/data";
 import { images } from "@/lib/images";
 
@@ -45,7 +45,7 @@ export default function OrderPage() {
             ))}
           </div>
           <div className="mt-12">
-            <Button href="/reservation">Request Table Service</Button>
+            <ReserveButton href="/reservation">Request Table Service</ReserveButton>
           </div>
         </div>
       </section>

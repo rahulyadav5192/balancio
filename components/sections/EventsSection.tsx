@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { EventCountdown } from "@/components/events/EventCountdown";
 import { Button } from "@/components/ui/Button";
+import { ReserveButton } from "@/components/ui/ReserveButton";
 import {
   EventCircleShape,
   EventRingShape,
@@ -193,7 +194,7 @@ export function EventsSection() {
                 or speak with our concierge to plan a private evening.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button href="/reservation">Make A Reservation</Button>
+                <ReserveButton href="/reservation" />
                 <Button href="/contact" variant="secondary">
                   Get In Touch
                 </Button>
